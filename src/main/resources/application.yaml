@@ -1,0 +1,21 @@
+spring:
+  main:
+    banner-mode: "off"
+logging:
+  level:
+    root: OFF
+composedtruststores:
+  enabled: true
+  trustStores:
+  - id: DEFAULT
+  # - id: JAVA_NET_SSL_TRUSTSTORE
+  # - id: SERVER_SSL_TRUSTSTORE
+  # - id: SELF_SIGNED
+  #   trust-store: classpath:trustStores.p12
+  #   trust-store-password: abcdefg
+  #   trust-store-type: PKCS12
+server:
+  ssl:
+    trust-store: truststore
+    trust-store-password: abcdefg
+    trust-store-type: JKS
